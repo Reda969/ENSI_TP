@@ -1,0 +1,17 @@
+<body>
+    <div class="carousel-container">
+      <button onclick="changerImage(-1)">Précédent</button>
+      <img id="carrousel" src="1.png" width="300px" />
+      <button onclick="changerImage(1)">Suivant</button>
+    </div>
+
+    <script>
+      let images = ["1.png", "2.png", "3.png"];
+      let index = 0;
+
+      function changerImage(direction) {
+        index = (index + direction + images.length) % images.length;
+        document.getElementById("carrousel").src = images[index];
+      }
+    </script>
+  </body>
